@@ -98,7 +98,7 @@ function App() {
           element={<AuthPage />} 
         />
       </Routes>
-    {/** Only shows footer is authenticated */}
+    {/** Only shows footer if user exists */}
       {user && <Footer />}
     </main>
   );
