@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Footer, Navbar } from "./components";
+import { Footer, NavigationBar } from "./components";
 import { 
   Outlet, 
   Navigate, 
@@ -37,7 +37,7 @@ function App() {
   const { user } = useSelector((state) => state.user);
   return (
     <main className='bg-[#f7fdfd]'>
-      <Navbar />
+      <NavigationBar />
       <Routes>
         <Route 
           element={<Layout />}

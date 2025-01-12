@@ -26,6 +26,7 @@ function MenuList({ user, onClick }) {
               </span>
             </div>
 
+          {/** Get user profile image */}
             <img
               src={user?.profileUrl}
               alt='user profile'
@@ -96,11 +97,11 @@ function MenuList({ user, onClick }) {
     </div>
   );
 }
-const Navbar = () => {
+const NavigationBar = () => {
   const user = useSelector((state) => state.user);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleCloseNavbar = () => {
+  const handleCloseNavigationBar = () => {
     setIsOpen((prev) => !prev);
   };
 
@@ -157,21 +158,21 @@ const Navbar = () => {
             isOpen ? "absolute flex bg-[#f7fdfd] " : "hidden"
           } container mx-auto lg:hidden flex-col pl-8 gap-3 py-5`}
         >
-          <Link to='/' onClick={handleCloseNavbar}>
+          <Link to='/' onClick={handleCloseNavigationBar}>
             Find Job
           </Link>
-          <Link to='/companies' onClick={handleCloseNavbar}>
+          <Link to='/companies' onClick={handleCloseNavigationBar}>
             Companies
           </Link>
           <Link
-            onClick={handleCloseNavbar}
+            onClick={handleCloseNavigationBar}
             to={
               user?.accountType === "seeker" ? "applly-gistory" : "upload-job"
             }
           >
             {user?.accountType === "seeker" ? "Applications" : "Upload Job"}
           </Link>
-          <Link to='/about-us' onClick={handleCloseNavbar}>
+          <Link to='/about-us' onClick={handleCloseNavigationBar}>
             About
           </Link>
 
@@ -185,7 +186,7 @@ const Navbar = () => {
               </a>
             ) : (
               <div>
-                <MenuList user={user} onClick={handleCloseNavbar} />
+                <MenuList user={user} onClick={handleCloseNavigationBar} />
               </div>
             )}
           </div>
