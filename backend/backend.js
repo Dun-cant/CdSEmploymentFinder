@@ -11,7 +11,7 @@ import dbConnection from "./dbConfig/dbConnection.js";
 import router from "./routes/index.js";
 import errorMiddleware from "./middlewares/errorMiddleware.js";
 
-dotenv.config();
+require['dotenv'].config();
 
 const app = express();
 
