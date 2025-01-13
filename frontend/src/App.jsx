@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import {
   About,
-  AuthPage,
+  AuthenticationPage,
   Companies,
   CompanyProfile,
   FindJobs,
@@ -95,7 +95,7 @@ function App() {
 
         <Route 
           path='/user-auth' 
-          element={<AuthPage />} 
+          element={<AuthenticationPage />} 
         />
       </Routes>
     {/** Only shows footer if user exists */}

@@ -7,6 +7,11 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { CustomButton, TextInput } from "../components";
 
+UserForm.propTypes = {
+  open: PropTypes.string.isRequired,
+  setOpen: PropTypes.string.isRequired,  
+};
+
 const UserForm = ({ open, setOpen }) => {
   const { user } = useSelector((state) => state.user);
   const {
@@ -138,6 +143,7 @@ const UserForm = ({ open, setOpen }) => {
                     <div className='w-full flex gap-2 text-sm'>
                       <div className='w-1/2'>
                         <label className='text-gray-600 text-sm mb-1'>
+                          {/* <input type="text" /> */}
                           Profile Picture
                         </label>
                         <input
@@ -148,6 +154,7 @@ const UserForm = ({ open, setOpen }) => {
 
                       <div className='w-1/2'>
                         <label className='text-gray-600 text-sm mb-1'>
+                        {/* <input type="text" /> */}
                           Resume
                         </label>
                         <input
@@ -159,6 +166,7 @@ const UserForm = ({ open, setOpen }) => {
 
                     <div className='flex flex-col'>
                       <label className='text-gray-600 text-sm mb-1'>
+                      {/* <input type="text" /> */}
                         About
                       </label>
                       <textarea

@@ -97,7 +97,6 @@ const Footer = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                @CodeWave
               </a>
             </p>
 

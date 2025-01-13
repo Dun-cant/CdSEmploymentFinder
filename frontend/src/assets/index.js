@@ -1,5 +1,5 @@
 import NoProfile from "./userprofile.png";
-import CDSprimaryLogo from "./CDSprimaryLogo";
+import CDSprimaryLogo from "./CDSprimaryLogo.png";
 import Google from "./google.png";
 import Linkedin from "./linkedin.png";
 import Youtube from "./youtube.png";

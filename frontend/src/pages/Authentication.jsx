@@ -23,4 +23,4 @@ const Authentication = () => {
   );
 };
 
-export default Auth;
+export default Authentication;
