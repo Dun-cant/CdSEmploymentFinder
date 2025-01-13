@@ -7,7 +7,7 @@ import bodyParser from "body-parser";
 import xss from "xss-clean";
 import mongoSanitize from "express-mongo-sanitize";
 
-import dbConnection from "./dbConfiguration/dbConnection.js";
+import dbConnection from "./dbConfig/dbConnection.js";
 import router from "./routes/index.js";
 import errorMiddleware from "./middlewares/errorMiddleware.js";
 
@@ -17,10 +17,10 @@ const app = express();
 
 const PORT = process.env.PORT || 8800;
 
-// MongoDB Connection
+// MONGODB CONNECTION
 dbConnection();
 
-// Middlenames
+// middlenames
 app.use(cors());
 app.use(xss());
 app.use(mongoSanitize());
@@ -33,7 +33,7 @@ app.use(morgan("dev"));
 
 app.use(router);
 
-// Error middleware
+//error middleware
 app.use(errorMiddleware);
 
 app.listen(PORT, () => {

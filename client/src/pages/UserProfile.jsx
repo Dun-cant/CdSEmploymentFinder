@@ -7,11 +7,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { CustomButton, TextInput } from "../components";
 
-UserForm.propTypes = {
-  open: PropTypes.string.isRequired,
-  setOpen: PropTypes.string.isRequired,  
-};
-
 const UserForm = ({ open, setOpen }) => {
   const { user } = useSelector((state) => state.user);
   const {
@@ -33,9 +28,10 @@ const UserForm = ({ open, setOpen }) => {
   const closeModal = () => setOpen(false);
 
   return (
+    <>
       <Transition appear show={open ?? false} as={Fragment}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
-          <TransitionChild
+          <Transition.Child
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -45,11 +41,11 @@ const UserForm = ({ open, setOpen }) => {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25' />
-          </TransitionChild>
+          </Transition.Child>
 
           <div className='fixed inset-0 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
-              <TransitionChild
+              <Transition.Child
                 as={Fragment}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
@@ -58,13 +54,13 @@ const UserForm = ({ open, setOpen }) => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <DialogPanel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
-                  <DialogTitle
+                <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                  <Dialog.Title
                     as='h3'
                     className='text-lg font-semibold leading-6 text-gray-900'
                   >
                     Edit Profile
-                  </DialogTitle>
+                  </Dialog.Title>
                   <form
                     className='w-full mt-2 flex flex-col gap-5'
                     onSubmit={handleSubmit(onSubmit)}
@@ -143,7 +139,6 @@ const UserForm = ({ open, setOpen }) => {
                     <div className='w-full flex gap-2 text-sm'>
                       <div className='w-1/2'>
                         <label className='text-gray-600 text-sm mb-1'>
-                          {/* <input type="text" /> */}
                           Profile Picture
                         </label>
                         <input
@@ -154,7 +149,6 @@ const UserForm = ({ open, setOpen }) => {
 
                       <div className='w-1/2'>
                         <label className='text-gray-600 text-sm mb-1'>
-                        {/* <input type="text" /> */}
                           Resume
                         </label>
                         <input
@@ -166,7 +160,6 @@ const UserForm = ({ open, setOpen }) => {
 
                     <div className='flex flex-col'>
                       <label className='text-gray-600 text-sm mb-1'>
-                      {/* <input type="text" /> */}
                         About
                       </label>
                       <textarea
@@ -197,12 +190,13 @@ const UserForm = ({ open, setOpen }) => {
                       />
                     </div>
                   </form>
-                </DialogPanel>
-              </TransitionChild>
+                </Dialog.Panel>
+              </Transition.Child>
             </div>
           </div>
         </Dialog>
       </Transition>
+    </>
   );
 };
 
@@ -263,6 +257,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
+
       <UserForm open={open} setOpen={setOpen} />
     </div>
   );

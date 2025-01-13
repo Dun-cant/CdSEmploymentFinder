@@ -10,10 +10,10 @@ import Spotify from "./spotify.png";
 import Office from "./office.jpg";
 import JobImg from "./job.jpg";
 import Facebook from "./facebook.png";
-import CdSBandsLogo from "./CdSBandsLogo.png";
+import CodeWave from "./codewave.png";
 
 export {
-  CdSBandsLogo,
+  CodeWave,
   NoProfile,
   Facebook,
   WhatsApp,

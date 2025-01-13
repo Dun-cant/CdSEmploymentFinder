@@ -71,17 +71,17 @@ const Footer = () => {
             </div>
 
             <span className='inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto'>
-              <a href='https://youtube.com/@CodeWaveWithAsante'className='text-white text-xl  hover:scale-125 ease-in-out duration-300'>
+              <a className='text-white text-xl  hover:scale-125 ease-in-out duration-300'>
                 <FaFacebookF />
               </a>
-              <a href='https://youtube.com/@CodeWaveWithAsante'className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
+              <a className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
                 <FaTwitter />
               </a>
-              <a href='https://youtube.com/@CodeWaveWithAsante'className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
+              <a className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
                 <FiInstagram />
               </a>
 
-              <a href='https://youtube.com/@CodeWaveWithAsante' className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
+              <a className='ml-3 text-white text-xl  hover:scale-125 ease-in-out duration-300'>
                 <FaLinkedinIn />
               </a>
             </span>
@@ -91,12 +91,14 @@ const Footer = () => {
         <div className='bg-[#001a36]'>
           <div className='container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
             <p className='text-gray-300 text-sm text-center sm:text-left'>
-              &copy; 2023 Job Finder — <a
+              &copy; 2023 Job Finder —
+              <a
                 href='https://youtube.com/@CodeWaveWithAsante'
                 className='text-[#1199e7] ml-1'
                 target='_blank'
                 rel='noopener noreferrer'
               >
+                @CodeWave
               </a>
             </p>
 

@@ -1,4 +1,4 @@
-import NavigationBar from "./NavigationBar"
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CustomButton from "./CustomButton";
 import TextInput from "./TextInput";
@@ -11,7 +11,7 @@ import CompanyCard from "./CompanyCard";
 import JobTypes from "./JobTypes";
 
 export {
-  NavigationBar,
+  Navbar,
   Footer,
   CustomButton,
   TextInput,

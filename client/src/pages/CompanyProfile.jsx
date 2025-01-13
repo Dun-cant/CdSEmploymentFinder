@@ -31,9 +31,10 @@ const CompnayForm = ({ open, setOpen }) => {
   const closeModal = () => setOpen(false);
 
   return (
+    <>
       <Transition appear show={opener ?? false} as={Fragment}>
         <Dialog as='div' className='relative z-50' onClose={closeModal}>
-          <TransitionChild
+          <Transition.Child
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -43,11 +44,11 @@ const CompnayForm = ({ open, setOpen }) => {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black bg-opacity-25' />
-          </TransitionChild>
+          </Transition.Child>
 
           <div className='fixed inset-0 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
-              <TransitionChild
+              <Transition.Child
                 as={Fragment}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
@@ -56,13 +57,13 @@ const CompnayForm = ({ open, setOpen }) => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <DialogPanel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
-                  <DialogTitle
+                <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                  <Dialog.Title
                     as='h3'
                     className='text-lg font-semibold leading-6 text-gray-900'
                   >
                     Edit Company Profile
-                  </DialogTitle>
+                  </Dialog.Title>
 
                   <form
                     className='w-full mt-2 flex flex-col gap-5'
@@ -145,12 +146,13 @@ const CompnayForm = ({ open, setOpen }) => {
                       />
                     </div>
                   </form>
-                </DialogPanel>
-              </TransitionChild>
+                </Dialog.Panel>
+              </Transition.Child>
             </div>
           </div>
         </Dialog>
       </Transition>
+    </>
   );
 };
 

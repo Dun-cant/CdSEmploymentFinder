@@ -10,14 +10,6 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
     setValue(e.target.value);
   };
 
-  SearchInput.propTypes = {
-    placeholder: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,  
-    value: PropTypes.string.isRequired,
-    setValue: PropTypes.string.isRequired,  
-    styles: PropTypes.string.isRequired
-  };
-
   const clearInput = () => setValue("");
 
   return (
@@ -38,16 +30,6 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
       />
     </div>
   );
-};
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,  
-  handleClick: PropTypes.string.isRequired,
-  searchQuery: PropTypes.string.isRequired,  
-  setSearchQuery: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  setLocation: PropTypes.string.isRequired
 };
 
 const Header = ({
@@ -101,7 +83,7 @@ const Header = ({
             <div className='w-full lg:1/2 flex flex-wrap gap-3 md:gap-6 py-10 md:py-14'>
               {popularSearch.map((search, index) => (
                 <span
-                  key={id}
+                  key={index}
                   className='bg-[#1d4fd826] text-[#1d4ed8] py-1 px-2 rounded-full text-sm md:text-base'
                 >
                   {search}
@@ -112,7 +94,7 @@ const Header = ({
         </div>
 
         <div className='w-1/3 h-full absolute top-24 md:-top-6 lg:-top-14 right-16 2xl:right-[18rem]'>
-          <img src={CDSprimaryLogo} className='object-contain' alt="Corona del Sol"/>
+          <img src={CDSprimaryLogo} className='object-contain' />
         </div>
       </div>
     </div>

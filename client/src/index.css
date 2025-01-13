@@ -44,7 +44,7 @@ body {
   z-index: 2;
 }
 
-/** Removes the default appearance */
+/* Removing the default appearance */
 .thumb,
 .thumb::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -67,7 +67,7 @@ body {
   z-index: 4;
 }
 
-/** Modifications for Chrome users */
+/* For Chrome browsers */
 .thumb::-webkit-slider-thumb {
   background-color: #220f77;
   border: none;
@@ -81,7 +81,7 @@ body {
   position: relative;
 }
 
-/** Miodification for Firefox users */
+/* For Firefox browsers */
 .thumb::-moz-range-thumb {
   background-color: #f1f5f7;
   border: none;
