@@ -3,11 +3,19 @@ import { AiOutlineSearch, AiOutlineCloseCircle } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import CustomButton from "./CustomButton";
 import { popularSearch } from "../utils/data";
-import { HeroImage } from "../assets";
+import { CDSprimaryLogo } from "../assets";
 
 const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
   const handleChange = (e) => {
     setValue(e.target.value);
+  };
+
+  SearchInput.propTypes = {
+    placeholder: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,  
+    value: PropTypes.string.isRequired,
+    setValue: PropTypes.string.isRequired,  
+    styles: PropTypes.string.isRequired
   };
 
   const clearInput = () => setValue("");
@@ -30,6 +38,16 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
       />
     </div>
   );
+};
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,  
+  handleClick: PropTypes.string.isRequired,
+  searchQuery: PropTypes.string.isRequired,  
+  setSearchQuery: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  setLocation: PropTypes.string.isRequired
 };
 
 const Header = ({
@@ -83,7 +101,7 @@ const Header = ({
             <div className='w-full lg:1/2 flex flex-wrap gap-3 md:gap-6 py-10 md:py-14'>
               {popularSearch.map((search, index) => (
                 <span
-                  key={index}
+                  key={id}
                   className='bg-[#1d4fd826] text-[#1d4ed8] py-1 px-2 rounded-full text-sm md:text-base'
                 >
                   {search}
@@ -94,7 +112,7 @@ const Header = ({
         </div>
 
         <div className='w-1/3 h-full absolute top-24 md:-top-6 lg:-top-14 right-16 2xl:right-[18rem]'>
-          <img src={HeroImage} className='object-contain' />
+          <img src={CDSprimaryLogo} className='object-contain' alt="Corona del Sol"/>
         </div>
       </div>
     </div>

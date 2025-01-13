@@ -1,5 +1,5 @@
 import NoProfile from "./userprofile.png";
-import HeroImage from "./hero.png";
+import CDSprimaryLogo from "./CDSprimaryLogo";
 import Google from "./google.png";
 import Linkedin from "./linkedin.png";
 import Youtube from "./youtube.png";
@@ -10,17 +10,17 @@ import Spotify from "./spotify.png";
 import Office from "./office.jpg";
 import JobImg from "./job.jpg";
 import Facebook from "./facebook.png";
-import CodeWave from "./codewave.png";
+import CdSBandsLogo from "./CdSBandsLogo.png";
 
 export {
-  CodeWave,
+  CdSBandsLogo,
   NoProfile,
   Facebook,
   WhatsApp,
   Twitter,
   Instagram,
   Spotify,
-  HeroImage,
+  CDSprimaryLogo,
   Google,
   Linkedin,
   Youtube,
